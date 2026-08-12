@@ -51,3 +51,6 @@ The application is intended to provide a simple and accessible way for people to
 Flufi is financed by the **Jagiellonian University (Uniwersytet Jagielloński)**.
 
 This initiative is funded by the **Living Lab Useful Research HUB Flagship Programme** as part of the Strategic Programme **“Initiative of Excellence” at the Jagiellonian University**.
+
+## License
+This project is licensed under the GNU Affero General Public License v3.0 — see the [LICENSE](./LICENSE) file for details.
