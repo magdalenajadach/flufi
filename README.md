@@ -34,9 +34,7 @@ The application will then be available at the local development URL shown in the
 
 ## Design
 
-The original project and initial design work were created in Figma:
-
-[https://www.figma.com/design/alDNk6MnMfMSreOGzBRXss/Flufi](https://www.figma.com/design/alDNk6MnMfMSreOGzBRXss/Flufi)
+The original project and initial design work were created in Figma.
 
 
 ## Production
