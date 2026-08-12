@@ -2,8 +2,6 @@
 
 Flufi is a simple digital tool that connects people who want to help animals with specific opportunities to get involved, offered by animal shelters, charities, and community organisations.
 
-The platform brings together information about organisations’ current needs, events, and local initiatives, making it easier for people to find a way to help that fits their interests, time, and circumstances.
-
 The project started as a design and prototyping project in **Figma** and has now moved into its own code repository as the platform continues to be developed. The production version is planned to be hosted at **[flufi.pl](https://flufi.pl)**.
 
 The tool was developed as part of the **Living Lab** process, in which we worked together with individuals and organisations to create a solution addressing real-world needs around animal welfare and volunteering.
