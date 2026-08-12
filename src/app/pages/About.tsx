@@ -63,6 +63,21 @@ export default function About() {
               rzeczywiste potrzeby.
             </p>
 
+            <p>
+              Więcej informacji o projekcie można znaleźć na stronie
+              {' '}
+              <a
+                href="https://calila.id.uj.edu.pl/nabor-na-minigranty-projekty-2026-zaangazowanie-dla-zwierzat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 hover:no-underline focus-visible:outline-2 focus-visible:outline-offset-2"
+              >
+                projektu „Zaangażowanie dla zwierząt”
+                <span className="sr-only"> (otwiera się w nowej karcie)</span>
+              </a>.
+            </p>
+
+
             <div>
               <h2 className="text-[15px] font-bold text-neutral-900 mb-1">
                 Zespół projektu
