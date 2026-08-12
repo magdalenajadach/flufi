@@ -57,7 +57,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#f0ebe2] flex flex-col p-4 lg:p-0">
       {/* Top nav */}
-      <div className="w-full max-w-[690px] mx-auto flex justify-end pt-4 lg:pt-6 flex-shrink-0">
+      <div className="w-full max-w-[810px] mx-auto flex justify-end pt-4 lg:pt-6 flex-shrink-0">
         <Link
           to="/about"
           className="relative flex items-center gap-2 px-4 py-2 rounded-full text-[13px] font-semibold text-neutral-700 hover:text-neutral-900 transition-all active:scale-[0.97]"

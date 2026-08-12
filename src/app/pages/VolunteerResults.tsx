@@ -3,6 +3,7 @@ import { Link, useSearchParams } from "react-router";
 import { useState } from "react";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
 import imgKalendarz from "@/imports/kalendarz.png";
+import imgAdopcja from "@/imports/adopcja_love_dziekuje.png";
 
 const LABEL_MAP: Record<string, string> = {
   "wyprowadzanie-psow": "Spacer z psem",
@@ -10,7 +11,7 @@ const LABEL_MAP: Record<string, string> = {
   wydarzenie: "Wydarzenia",
   dostawy: "Zakupy",
   online: "Pomoc online",
-  adopcja: "Adoptions",
+  adopcja: "Adopcja",
 };
 
 type Opportunity = {
@@ -18,10 +19,17 @@ type Opportunity = {
   category: string;
   title: string;
   shelter: string;
-  day: string;
-  time: string;
-  spots: number;
+  day?: string;
+  time?: string;
+  spots?: number;
   location: string;
+  // Fields only present for adoptable-animal entries
+  animal?: {
+    species: "Pies" | "Kot";
+    breed: string;
+    age: string;
+    description: string;
+  };
 };
 
 const ALL_OPPORTUNITIES: Opportunity[] = [
@@ -105,6 +113,47 @@ const ALL_OPPORTUNITIES: Opportunity[] = [
     spots: 3,
     location: "Twój dom",
   },
+  {
+    id: 9,
+    category: "adopcja",
+    title: "Reksio",
+    shelter: "Schronisko Kraków Północ",
+    location: "Kraków",
+    animal: {
+      species: "Pies",
+      breed: "Mieszaniec",
+      age: "2 lata",
+      description:
+        "Wesoły i energiczny, uwielbia długie spacery i zabawę piłką.",
+    },
+  },
+  {
+    id: 10,
+    category: "adopcja",
+    title: "Bella",
+    shelter: "Animal Friends PL",
+    location: "Kraków",
+    animal: {
+      species: "Pies",
+      breed: "Owczarek mieszaniec",
+      age: "4 lata",
+      description:
+        "Przyjazna wobec innych psów, idealna dla aktywnej rodziny.",
+    },
+  },
+  {
+    id: 11,
+    category: "adopcja",
+    title: "Luna",
+    shelter: "Schronisko Kraków Południe",
+    location: "Kraków",
+    animal: {
+      species: "Pies",
+      breed: "Beagle mieszaniec",
+      age: "6 miesięcy",
+      description: "Szczeniak pełen energii, szuka cierpliwych opiekunów.",
+    },
+  },
 ];
 
 export default function VolunteerResults() {
@@ -173,6 +222,70 @@ export default function VolunteerResults() {
           )}
           {list.map((opp) => {
             const isJoined = joined.includes(opp.id);
+
+            if (opp.animal) {
+              const animal = opp.animal;
+              return (
+                <div
+                  key={opp.id}
+                  className="border border-neutral-200 rounded-2xl bg-white p-4 flex flex-col gap-3"
+                >
+                  <div className="flex gap-3">
+                    <img
+                      src={imgAdopcja}
+                      alt={opp.title}
+                      style={{
+                        width: "72px",
+                        height: "72px",
+                        objectFit: "contain",
+                        flexShrink: 0,
+                      }}
+                      className="rounded-xl bg-[#f7f4ee]"
+                    />
+                    <div className="flex flex-col gap-1 min-w-0">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="text-[15px] font-semibold text-neutral-900">
+                          {opp.title}
+                        </span>
+                        <span className="text-[11px] font-medium bg-amber-50 text-amber-700 border border-amber-200 px-2 py-0.5 rounded-full flex-shrink-0">
+                          {animal.species} · {animal.breed}
+                        </span>
+                      </div>
+                      <div className="text-[13px] text-neutral-500">
+                        {opp.shelter}
+                      </div>
+                      <div className="text-[12px] text-neutral-400">
+                        {animal.age} &middot; {opp.location}
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-[13px] text-neutral-700 leading-snug">
+                    {animal.description}
+                  </p>
+
+                  <div className="flex justify-start pt-1">
+                    <button
+                      onClick={() =>
+                        setJoined((prev) =>
+                          isJoined
+                            ? prev.filter((x) => x !== opp.id)
+                            : [...prev, opp.id],
+                        )
+                      }
+                      className={`px-5 py-2 rounded-xl text-[13px] font-semibold transition-all active:scale-[0.98] ${
+                        isJoined
+                          ? "bg-neutral-100 text-neutral-500"
+                          : "bg-[#f0a0bc] text-neutral-900 hover:opacity-90"
+                      }`}
+                    >
+                      {isJoined ? "Zgłoszono ✓" : "Chcę adoptować"}
+                    </button>
+                  </div>
+                </div>
+              );
+            }
+
             return (
               <div
                 key={opp.id}
