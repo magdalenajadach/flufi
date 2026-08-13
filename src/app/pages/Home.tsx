@@ -60,7 +60,7 @@ export default function Home() {
       <div className="w-full max-w-[810px] mx-auto flex justify-end pt-4 lg:pt-6 flex-shrink-0">
         <Link
           to="/about"
-          className="relative flex items-center gap-2 px-4 py-2 rounded-full text-[13px] font-semibold text-neutral-700 hover:text-neutral-900 transition-all active:scale-[0.97]"
+          className="relative flex items-center gap-2 px-4 py-2 rounded-full text-[13px] font-semibold text-neutral-700 hover:text-neutral-900 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97]"
         >
           <AboutBlobBackground />
           <span className="relative z-10">
@@ -98,7 +98,7 @@ export default function Home() {
                 <Link
                   key={card.path}
                   to={card.path}
-                  className={`relative flex flex-row items-center gap-4 px-5 py-5 lg:px-7 lg:py-6 hover:opacity-90 transition-all active:scale-[0.97] ${
+                  className={`relative flex flex-row items-center gap-4 px-5 py-5 lg:px-7 lg:py-6 hover:opacity-90 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] ${
                     card.variant === "outline"
                       ? `rounded-[28px] lg:rounded-full border-2 ${card.border}`
                       : ""

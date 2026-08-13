@@ -2,7 +2,6 @@ import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
 import flufiLogo from "@/imports/logo_flufi.png";
-import aboutIcon from "@/imports/adopcja_love_dziekuje.png";
 import livingLabLogo from "@/imports/living_lab.png";
 import uczelniaBadawczaLogo from "@/imports/uczelnia.png";
 import pawIcon from "@/imports/ikonka__apka_przycisk.png";
@@ -35,7 +34,7 @@ export default function About() {
         >
           <Link
             to="/"
-            className="w-10 h-10 flex items-center justify-center -ml-2 text-neutral-600 hover:text-neutral-900 transition-colors"
+            className="w-10 h-10 flex items-center justify-center -ml-2 text-neutral-600 hover:text-neutral-900 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97]"
           >
             <ArrowLeft size={20} strokeWidth={2} />
           </Link>
@@ -50,7 +49,7 @@ export default function About() {
 
           <div className="w-32 sm:w-40 opacity-80 mx-auto flex justify-center">
             <ImageWithFallback
-              src={aboutIcon}
+              src={flufiLogo}
               alt=""
               className="w-16 h-16 object-contain mx-auto"
               style={{ mixBlendMode: "multiply" }}

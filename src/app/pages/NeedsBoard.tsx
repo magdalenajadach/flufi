@@ -95,7 +95,7 @@ export default function NeedsBoard() {
           <div className="flex items-center gap-3 mb-6">
             <Link
               to="/"
-              className="w-10 h-10 flex items-center justify-center -ml-2 text-neutral-600 hover:text-neutral-900 transition-colors"
+              className="w-10 h-10 flex items-center justify-center -ml-2 text-neutral-600 hover:text-neutral-900 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97]"
             >
               <ArrowLeft size={20} strokeWidth={2} />
             </Link>
@@ -171,7 +171,7 @@ export default function NeedsBoard() {
                           : [...prev, need.id],
                       )
                     }
-                    className={`px-5 py-2 rounded-xl text-[13px] font-semibold transition-all active:scale-[0.97] ${
+                    className={`px-5 py-2 rounded-xl text-[13px] font-semibold transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] ${
                       isResponded
                         ? "bg-neutral-100 text-neutral-500"
                         : "bg-[#b7aff7] text-neutral-900 hover:opacity-90"
