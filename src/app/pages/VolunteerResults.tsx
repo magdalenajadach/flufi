@@ -356,7 +356,7 @@ export default function VolunteerResults() {
                         : "bg-[#b7aff7] text-neutral-900 hover:opacity-90"
                     }`}
                   >
-                    {isJoined ? "Dołączone" : "Dołącz"}
+                    {isJoined ? "Zapisano" : "Dołącz"}
                   </button>
                 </div>
               </div>
