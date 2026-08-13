@@ -5,6 +5,7 @@ import flufiLogo from "@/imports/logo_flufi.png";
 import aboutIcon from "@/imports/adopcja_love_dziekuje.png";
 import livingLabLogo from "@/imports/living_lab.png";
 import uczelniaBadawczaLogo from "@/imports/uczelnia.png";
+import pawIcon from "@/imports/ikonka__apka_przycisk.png";
 
 const team = [
   "Anna Bednarczyk",
@@ -13,6 +14,15 @@ const team = [
   "Jagoda Cierniak",
   "Joanna Grzymała-Moszczyńska",
   "Karolina Sikora",
+];
+
+const teamPawColors = [
+  "#ef4444", // red
+  "#f97316", // orange
+  "#eab308", // yellow
+  "#22c55e", // green
+  "#3b82f6", // blue
+  "#a855f7", // purple
 ];
 
 export default function About() {
@@ -82,7 +92,29 @@ export default function About() {
               <h2 className="text-[15px] font-bold text-neutral-900 mb-1">
                 Zespół projektu
               </h2>
-              <p>{team.join(", ")}</p>
+              <ul className="list-none pl-0 space-y-1.5">
+                {team.map((name, index) => (
+                  <li key={name} className="flex items-center gap-2">
+                    <span
+                      aria-hidden="true"
+                      className="inline-block w-4 h-4 shrink-0"
+                      style={{
+                        backgroundColor:
+                          teamPawColors[index % teamPawColors.length],
+                        WebkitMaskImage: `url(${pawIcon})`,
+                        maskImage: `url(${pawIcon})`,
+                        WebkitMaskSize: "contain",
+                        maskSize: "contain",
+                        WebkitMaskRepeat: "no-repeat",
+                        maskRepeat: "no-repeat",
+                        WebkitMaskPosition: "center",
+                        maskPosition: "center",
+                      }}
+                    />
+                    {name}
+                  </li>
+                ))}
+              </ul>
             </div>
 
             <div>
