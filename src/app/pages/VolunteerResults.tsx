@@ -182,7 +182,7 @@ export default function VolunteerResults() {
           <div className="flex items-center gap-3 mb-6">
             <Link
               to="/find-help"
-              className="w-10 h-10 flex items-center justify-center -ml-2 text-neutral-600 hover:text-neutral-900 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97]"
+              className="w-10 h-10 flex items-center justify-center -ml-2 text-neutral-600 hover:text-neutral-900 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0ebe2] rounded-full"
             >
               <ArrowLeft size={20} strokeWidth={2} />
             </Link>
@@ -214,7 +214,7 @@ export default function VolunteerResults() {
               </p>
               <Link
                 to="/find-help"
-                className="text-sm font-medium text-amber-600 underline"
+                className="text-sm font-medium text-amber-600 underline outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0ebe2] rounded-sm"
               >
                 Zmień filtry
               </Link>
@@ -273,7 +273,7 @@ export default function VolunteerResults() {
                             : [...prev, opp.id],
                         )
                       }
-                      className={`px-5 py-2 rounded-xl text-[13px] font-semibold transition-all motion-safe:hover:scale-[1.03] active:scale-[0.98] ${
+                      className={`px-5 py-2 rounded-xl text-[13px] font-semibold transition-all motion-safe:hover:scale-[1.03] active:scale-[0.98] outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0ebe2] ${
                         isJoined
                           ? "bg-neutral-100 text-neutral-500"
                           : "bg-[#f0a0bc] text-neutral-900 hover:opacity-90"
@@ -350,7 +350,7 @@ export default function VolunteerResults() {
                           : [...prev, opp.id],
                       )
                     }
-                    className={`px-5 py-2 rounded-xl text-[13px] font-semibold transition-all motion-safe:hover:scale-[1.03] active:scale-[0.98] ${
+                    className={`px-5 py-2 rounded-xl text-[13px] font-semibold transition-all motion-safe:hover:scale-[1.03] active:scale-[0.98] outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0ebe2] ${
                       isJoined
                         ? "bg-neutral-100 text-neutral-500"
                         : "bg-[#b7aff7] text-neutral-900 hover:opacity-90"
