@@ -34,7 +34,7 @@ export default function About() {
         >
           <Link
             to="/"
-            className="w-10 h-10 flex items-center justify-center -ml-2 text-neutral-600 hover:text-neutral-900 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97]"
+            className="w-10 h-10 flex items-center justify-center -ml-2 text-neutral-600 hover:text-neutral-900 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0ebe2] rounded-full"
           >
             <ArrowLeft size={20} strokeWidth={2} />
           </Link>
@@ -79,7 +79,7 @@ export default function About() {
                 href="https://calila.id.uj.edu.pl/nabor-na-minigranty-projekty-2026-zaangazowanie-dla-zwierzat"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline underline-offset-2 hover:no-underline focus-visible:outline-2 focus-visible:outline-offset-2"
+                className="underline underline-offset-2 hover:no-underline outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0ebe2] rounded-sm"
               >
                 projektu „Zaangażowanie dla zwierząt”
                 <span className="sr-only"> (otwiera się w nowej karcie)</span>
@@ -122,7 +122,7 @@ export default function About() {
               </h2>
               <a
                 href="mailto:anna.bednarczyk@uj.edu.pl"
-                className="text-amber-700 underline"
+                className="text-amber-700 underline outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0ebe2] rounded-sm"
               >
                 anna.bednarczyk@uj.edu.pl
               </a>
@@ -139,19 +139,38 @@ export default function About() {
                 Doskonałości w Uniwersytecie Jagiellońskim.
               </p>
             </div>
-          </div>
+            <div className="flex items-center justify-center gap-8 pt-8 pb-4 opacity-90">
+              <ImageWithFallback
+                src={livingLabLogo}
+                alt="Campus Living Lab"
+                className="h-24 w-auto object-contain"
+              />
+              <ImageWithFallback
+                src={uczelniaBadawczaLogo}
+                alt="Uczelnia Badawcza"
+                className="h-24 w-auto object-contain"
+              />
+            </div>
 
-          <div className="flex items-center justify-center gap-8 pt-8 pb-4 opacity-90">
-            <ImageWithFallback
-              src={livingLabLogo}
-              alt="Campus Living Lab"
-              className="h-24 w-auto object-contain"
-            />
-            <ImageWithFallback
-              src={uczelniaBadawczaLogo}
-              alt="Uczelnia Badawcza"
-              className="h-24 w-auto object-contain"
-            />
+            <div>
+              <h2 className="text-[15px] font-bold text-neutral-900 mb-1">
+                Dostępność
+              </h2>
+              <p>
+                Dostępność cyfrowa oznacza, że ze strony może
+                swobodnie korzystać każdy — także osoby poruszające
+                się wyłącznie za pomocą klawiatury, korzystające z
+                czytnika ekranu czy słabiej widzące. Zależy nam na
+                tym, aby pomaganie zwierzętom było możliwe dla jak
+                najszerszego grona osób, dlatego projektujemy Flufi
+                zgodnie z wytycznymi WCAG 2.2. Stronę można w pełni
+                obsłużyć z klawiatury, zadbaliśmy o czytelny kontrast
+                i opisy obrazów, a osoby wrażliwe na animacje mogą je
+                ograniczyć w ustawieniach swojego urządzenia. Jeśli
+                coś utrudnia Ci korzystanie ze strony, daj nam znać —
+                chętnie to poprawimy.
+              </p>
+            </div>
           </div>
         </div>
       </div>

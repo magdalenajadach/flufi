@@ -60,7 +60,7 @@ export default function Home() {
       <div className="w-full max-w-[810px] mx-auto flex justify-end pt-4 lg:pt-6 flex-shrink-0">
         <Link
           to="/about"
-          className="relative flex items-center gap-2 px-4 py-2 rounded-full text-[13px] font-semibold text-neutral-700 hover:text-neutral-900 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97]"
+          className="relative flex items-center gap-2 px-4 py-2 rounded-full text-[13px] font-semibold text-neutral-700 hover:text-neutral-900 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0ebe2]"
         >
           <AboutBlobBackground />
           <span className="relative z-10">
@@ -82,7 +82,7 @@ export default function Home() {
             />
           </div>
           {/* Right column - title + cards */}
-          <div className="flex-1 flex flex-col items-center lg:items-start justify-center px-1 lg:px-0 lg:pr-10 pb-8 lg:pb-0">
+          <div className="flex-1 flex flex-col items-center lg:items-start justify-center px-2 lg:px-0 lg:pr-10 pb-8 lg:pb-0">
             {/* Title block */}
             <div className="mb-6 lg:mb-8 w-full text-center lg:text-left">
               <h1 className="text-[32px] sm:text-[38px] lg:text-[46px] font-bold text-neutral-900 leading-tight tracking-tight">
@@ -98,9 +98,9 @@ export default function Home() {
                 <Link
                   key={card.path}
                   to={card.path}
-                  className={`relative flex flex-row items-center gap-4 px-5 py-5 lg:px-7 lg:py-6 hover:opacity-90 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] ${
+                  className={`relative flex flex-row items-center gap-4 px-5 py-5 lg:px-7 lg:py-6 hover:opacity-90 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-4 focus-visible:ring-offset-[#f0ebe2] rounded-[28px] lg:rounded-full ${
                     card.variant === "outline"
-                      ? `rounded-[28px] lg:rounded-full border-2 ${card.border}`
+                      ? `border-2 ${card.border}`
                       : ""
                   }`}
                 >

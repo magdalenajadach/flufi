@@ -36,7 +36,7 @@ export default function Volunteer() {
         <div className="flex items-center gap-3">
           <Link
             to="/"
-            className="w-10 h-10 flex items-center justify-center -ml-2 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97]"
+            className="w-10 h-10 flex items-center justify-center -ml-2 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0ebe2] rounded-full"
           >
             <ArrowLeft size={20} strokeWidth={2} />
           </Link>
@@ -67,7 +67,7 @@ export default function Volunteer() {
           {opportunities.map((opp, index) => (
             <button
               key={index}
-              className="flex flex-col gap-3 p-4 border border-neutral-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] text-left"
+              className="flex flex-col gap-3 p-4 border border-neutral-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0ebe2] text-left"
             >
               <div className="font-medium">{opp.title}</div>
               <div className="flex flex-col gap-2 text-sm text-neutral-600">
@@ -89,7 +89,7 @@ export default function Volunteer() {
         </div>
 
         {/* Apply Button */}
-        <button className="w-full py-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] mt-auto mb-6">
+        <button className="w-full py-4 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0ebe2] mt-auto mb-6">
           Zgłoś się jako wolontariusz
         </button>
       </div>

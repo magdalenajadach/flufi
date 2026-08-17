@@ -48,7 +48,7 @@ export default function VolunteerMatch() {
         <div className="flex items-center gap-3 mb-6">
           <Link
             to="/"
-            className="w-10 h-10 flex items-center justify-center -ml-2 text-neutral-600 hover:text-neutral-900 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97]"
+            className="w-10 h-10 flex items-center justify-center -ml-2 text-neutral-600 hover:text-neutral-900 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0ebe2] rounded-full"
           >
             <ArrowLeft size={20} strokeWidth={2} />
           </Link>
@@ -69,14 +69,14 @@ export default function VolunteerMatch() {
         </p>
 
         {/* Category grid */}
-        <div className="grid grid-cols-2 gap-3 mb-auto overflow-y-auto">
+        <div className="grid grid-cols-2 gap-3 mb-auto overflow-y-auto p-2 -m-2">
           {categories.map((cat) => {
             const active = selected.includes(cat.id);
             return (
               <button
                 key={cat.id}
                 onClick={() => toggle(cat.id)}
-                className={`flex flex-col items-center gap-2 p-4 rounded-2xl border text-center transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] ${
+                className={`flex flex-col items-center gap-2 p-4 rounded-2xl border text-center transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0ebe2] ${
                   active
                     ? "border-[#a8a0f0] bg-white shadow-sm"
                     : "border-neutral-200 bg-white hover:border-neutral-300"
@@ -111,7 +111,7 @@ export default function VolunteerMatch() {
         <div className="mt-5 mb-8 flex-shrink-0">
           <button
             onClick={handleFind}
-            className="w-full py-4 rounded-full font-semibold text-[15px] flex items-center justify-center gap-2 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.98] bg-[#b7aff7] text-neutral-900 hover:bg-[#a89af5] shadow-sm"
+            className="w-full py-4 rounded-full font-semibold text-[15px] flex items-center justify-center gap-2 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.98] bg-[#b7aff7] text-neutral-900 hover:bg-[#a89af5] shadow-sm outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0ebe2]"
           >
             {selected.length === 0
               ? "Pokaż wszystkie opcje"
@@ -121,7 +121,7 @@ export default function VolunteerMatch() {
           {selected.length > 0 && (
             <button
               onClick={() => setSelected([])}
-              className="w-full py-2 text-sm text-neutral-400 hover:text-neutral-600 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] mt-1"
+              className="w-full py-2 text-sm text-neutral-400 hover:text-neutral-600 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0ebe2] mt-1"
             >
               Wyczyść wybór
             </button>
