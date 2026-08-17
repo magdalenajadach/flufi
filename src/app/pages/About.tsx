@@ -157,13 +157,18 @@ export default function About() {
                 Dostępność
               </h2>
               <p>
-                Dbamy o to, aby Flufi było dostępne dla wszystkich —
-                projektujemy je zgodnie z wytycznymi WCAG 2.2. Stronę
-                można w pełni obsłużyć z klawiatury, zadbaliśmy o
-                czytelny kontrast i opisy obrazów, a osoby wrażliwe na
-                animacje mogą je ograniczyć w ustawieniach swojego
-                urządzenia. Jeśli coś utrudnia Ci korzystanie ze
-                strony, daj nam znać — chętnie to poprawimy.
+                Dostępność cyfrowa oznacza, że ze strony może
+                swobodnie korzystać każdy — także osoby poruszające
+                się wyłącznie za pomocą klawiatury, korzystające z
+                czytnika ekranu czy słabiej widzące. Zależy nam na
+                tym, aby pomaganie zwierzętom było możliwe dla jak
+                najszerszego grona osób, dlatego projektujemy Flufi
+                zgodnie z wytycznymi WCAG 2.2. Stronę można w pełni
+                obsłużyć z klawiatury, zadbaliśmy o czytelny kontrast
+                i opisy obrazów, a osoby wrażliwe na animacje mogą je
+                ograniczyć w ustawieniach swojego urządzenia. Jeśli
+                coś utrudnia Ci korzystanie ze strony, daj nam znać —
+                chętnie to poprawimy.
               </p>
             </div>
           </div>
