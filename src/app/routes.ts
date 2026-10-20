@@ -4,6 +4,8 @@ import VolunteerMatch from "./pages/VolunteerMatch";
 import VolunteerResults from "./pages/VolunteerResults";
 import NeedsBoard from "./pages/NeedsBoard";
 import About from "./pages/About";
+import BeforeYouHelp from "./pages/BeforeYouHelp";
+import HowToHelp from "./pages/HowToHelp";
 
 export const router = createBrowserRouter([
   {
@@ -25,5 +27,13 @@ export const router = createBrowserRouter([
   {
     path: "/about",
     Component: About,
+  },
+  {
+    path: "/before-you-help",
+    Component: BeforeYouHelp,
+  },
+  {
+    path: "/how-to-help",
+    Component: HowToHelp,
   },
 ]);

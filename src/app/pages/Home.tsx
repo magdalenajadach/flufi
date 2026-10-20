@@ -2,40 +2,6 @@ import { Link } from "react-router";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
 import flufiLogo from "@/imports/logo_flufi.png";
 import pawIcon from "@/imports/ikonka__apka_przycisk.png";
-import aboutIcon from "@/imports/adopcja_love_dziekuje.png";
-
-const cards = [
-  {
-    path: "/find-help",
-    variant: "outline",
-    border: "border-[#f0a0bc]",
-    title: "Znajdź sposób na pomoc",
-    subtitle:
-      "Dopasuj swój czas i umiejętności\ndo potrzeb zwierząt",
-  },
-  {
-    path: "/needs",
-    variant: "blob",
-    fill: "#b7aff7",
-    title: "Aktualne potrzeby w okolicy",
-    subtitle:
-      "Sprawdź, czego w tej chwili\npotrzebują schroniska",
-    blobPath:
-      "M 15 30 C 0 10, 35 -12, 40 15 C 30 35, 55 30, 60 8 C 140 -10, 260 -5, 350 10 C 395 18, 405 40, 392 55 C 415 75, 405 105, 380 118 C 300 145, 180 130, 95 140 C 45 146, 8 132, 15 105 C -10 90, 0 55, 15 30 Z",
-  },
-];
-
-function BlobBackground({ fill, path }) {
-  return (
-    <svg
-      viewBox="0 0 400 140"
-      preserveAspectRatio="none"
-      className="absolute inset-0 w-full h-full"
-    >
-      <path d={path} fill={fill} />
-    </svg>
-  );
-}
 
 // Subtler, flatter blob for the top-right "About" button — pale pink fill
 function AboutBlobBackground() {
@@ -71,7 +37,7 @@ export default function Home() {
 
       {/* Main content, centered in remaining space */}
       <div className="flex-1 flex items-center justify-center">
-        <div className="w-full max-w-[890px] lg:h-[644px] bg-[#f0ebe2] flex flex-col lg:flex-row overflow-hidden">
+        <div className="w-full max-w-[890px] flex flex-col lg:flex-row overflow-hidden">
           {/* Flufi */}
           <div className="relative w-full lg:w-[43%] flex-shrink-0 flex items-center justify-center lg:justify-start py-4 lg:py-0">
             <ImageWithFallback
@@ -81,51 +47,39 @@ export default function Home() {
               style={{ mixBlendMode: "multiply" }}
             />
           </div>
-          {/* Right column - title + cards */}
-          <div className="flex-1 flex flex-col items-center lg:items-start justify-center px-2 lg:px-0 lg:pr-10 pb-8 lg:pb-0">
-            {/* Title block */}
-            <div className="mb-6 lg:mb-8 w-full text-center lg:text-left">
-              <h1 className="text-[32px] sm:text-[38px] lg:text-[46px] font-bold text-neutral-900 leading-tight tracking-tight">
-                Jak pomóc?
+          {/* Right column - hero + CTA */}
+          <div className="flex-1 flex flex-col justify-center px-2 lg:px-0 lg:pr-10 pb-8 lg:pb-0">
+            <div className="w-full text-center lg:text-left">
+              <h1 className="text-[26px] sm:text-[30px] lg:text-[34px] font-bold text-neutral-900 leading-tight tracking-tight">
+                Znajdź prosty sposób, by pomóc zwierzętom.
               </h1>
-              <p className="text-[13px] font-medium text-neutral-600 mt-1 leading-snug">
-                Wybierz rodzaj wsparcia, jaki chcesz zaoferować
+              <p className="text-[16px] sm:text-[18px] lg:text-[20px] font-medium text-neutral-500 leading-snug mt-1">
+                Lokalnie, na swoich zasadach.
               </p>
-            </div>
-            {/* Cards */}
-            <div className="flex flex-col gap-4 lg:gap-8 w-full">
-              {cards.map((card) => (
-                <Link
-                  key={card.path}
-                  to={card.path}
-                  className={`relative flex flex-row items-center gap-4 px-5 py-5 lg:px-7 lg:py-6 hover:opacity-90 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-4 focus-visible:ring-offset-[#f0ebe2] rounded-[28px] lg:rounded-full ${
-                    card.variant === "outline"
-                      ? `border-2 ${card.border}`
-                      : ""
-                  }`}
-                >
-                  {card.variant === "blob" && (
-                    <BlobBackground
-                      fill={card.fill}
-                      path={card.blobPath}
-                    />
-                  )}
-                  <ImageWithFallback
-                    src={pawIcon}
-                    alt="paw"
-                    className="relative z-10 w-10 h-10 lg:w-12 lg:h-12 flex-shrink-0 object-contain"
-                    style={{ mixBlendMode: "multiply" }}
-                  />
-                  <div className="relative z-10 flex flex-col text-left">
-                    <span className="text-[16px] lg:text-[18px] font-bold text-neutral-900 leading-snug">
-                      {card.title}
-                    </span>
-                    <span className="text-[12.5px] lg:text-[13px] text-neutral-700 leading-snug whitespace-pre-line mt-1">
-                      {card.subtitle}
-                    </span>
-                  </div>
-                </Link>
-              ))}
+              <p className="text-[13px] font-medium text-neutral-600 mt-3 leading-snug">
+                Flufi pomaga znaleźć konkretne możliwości
+                zaangażowania — nie zastępuje procedur adopcyjnych
+                ani zasad organizacji.
+              </p>
+              <Link
+                to="/before-you-help"
+                className="inline-block text-[12.5px] text-neutral-600 underline underline-offset-2 hover:text-neutral-900 hover:no-underline mt-2 outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0ebe2] rounded-sm"
+              >
+                Na czym polega zaangażowanie dla zwierząt
+              </Link>
+
+              <Link
+                to="/how-to-help"
+                className="inline-flex items-center gap-3 px-6 py-4 lg:px-7 lg:py-5 rounded-full bg-[#b7aff7] text-neutral-900 font-bold text-[15px] lg:text-[16px] hover:opacity-90 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-4 focus-visible:ring-offset-[#f0ebe2] mt-6"
+              >
+                <ImageWithFallback
+                  src={pawIcon}
+                  alt=""
+                  className="w-7 h-7 object-contain"
+                  style={{ mixBlendMode: "multiply" }}
+                />
+                Zobacz, jak możesz pomóc
+              </Link>
             </div>
           </div>
         </div>
