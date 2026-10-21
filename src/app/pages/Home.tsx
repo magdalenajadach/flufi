@@ -61,25 +61,27 @@ export default function Home() {
                 zaangażowania — nie zastępuje procedur adopcyjnych
                 ani zasad organizacji.
               </p>
-              <Link
-                to="/before-you-help"
-                className="inline-block text-[12.5px] text-neutral-600 underline underline-offset-2 hover:text-neutral-900 hover:no-underline mt-2 outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0ebe2] rounded-sm"
-              >
-                Na czym polega zaangażowanie dla zwierząt
-              </Link>
+              <div className="flex flex-col gap-3 mt-6 w-full max-w-[420px] mx-auto lg:mx-0">
+                <Link
+                  to="/before-you-help"
+                  className="w-full inline-flex items-center justify-center text-center px-6 py-4 lg:px-7 lg:py-5 rounded-full border-2 border-neutral-900 text-neutral-900 font-bold text-[15px] lg:text-[16px] hover:bg-neutral-900 hover:text-white transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-4 focus-visible:ring-offset-[#f0ebe2]"
+                >
+                  Na czym polega zaangażowanie dla zwierząt
+                </Link>
 
-              <Link
-                to="/how-to-help"
-                className="inline-flex items-center gap-3 px-6 py-4 lg:px-7 lg:py-5 rounded-full bg-[#b7aff7] text-neutral-900 font-bold text-[15px] lg:text-[16px] hover:opacity-90 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-4 focus-visible:ring-offset-[#f0ebe2] mt-6"
-              >
-                <ImageWithFallback
-                  src={pawIcon}
-                  alt=""
-                  className="w-7 h-7 object-contain"
-                  style={{ mixBlendMode: "multiply" }}
-                />
-                Zobacz, jak możesz pomóc
-              </Link>
+                <Link
+                  to="/how-to-help"
+                  className="w-full inline-flex items-center justify-center gap-3 px-6 py-4 lg:px-7 lg:py-5 rounded-full bg-[#b7aff7] text-neutral-900 font-bold text-[15px] lg:text-[16px] hover:opacity-90 transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-4 focus-visible:ring-offset-[#f0ebe2]"
+                >
+                  <ImageWithFallback
+                    src={pawIcon}
+                    alt=""
+                    className="w-7 h-7 object-contain"
+                    style={{ mixBlendMode: "multiply" }}
+                  />
+                  Zobacz, jak możesz pomóc
+                </Link>
+              </div>
             </div>
           </div>
         </div>
