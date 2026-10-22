@@ -1,16 +1,18 @@
 # Flufi
 
-Flufi is a simple digital tool that connects people who want to help animals with specific opportunities to get involved, offered by animal shelters, charities, and community organisations.
+Flufi is a digital tool that connects people who want to help animals with concrete opportunities to get involved, shared by animal shelters, charities, and community organisations.
 
-The project started as a design and prototyping project in **Figma** and has now moved into its own code repository as the platform continues to be developed. The production version is planned to be hosted at **[flufi.pl](https://flufi.pl)**.
+The platform was developed as part of a **Living Lab** process, bringing together research, design, and feedback from people with practical experience in animal welfare. The concept and prototype were discussed with people involved in animal welfare to better understand their needs and challenges. The initial version was then implemented, deployed, and iterated on based on feedback from volunteers.
 
-The tool was developed as part of the **Living Lab** process, in which we worked together with individuals and organisations to create a solution addressing real-world needs around animal welfare and volunteering.
+Flufi aims to make it easier for people to discover meaningful ways to support animals and connect with organisations working in their local communities.
+
+**Live website:** https://flufi.pl
 
 ## Project status
 
-The project is currently under active development. The initial version was created and explored in Figma, and the implementation has now been moved into a standalone repository.
+The initial version of Flufi has been implemented and deployed. Following the first release, the platform was refined through iterations informed by feedback from volunteers and discussions with people involved in animal welfare.
 
-The repository contains the application code and will serve as the basis for further development, testing, and deployment of Flufi.
+The project began with design and prototyping in **Figma** and subsequently evolved into a standalone web application. This repository contains the application code and provides the foundation for maintaining and further developing the platform.
 
 ## Getting started
 
@@ -30,27 +32,26 @@ npm install
 npm run dev
 ```
 
-The application will then be available at the local development URL shown in the terminal.
+The application will be available at the local development URL displayed in the terminal.
 
 ## Design
 
-The original project and initial design work were created in Figma.
-
+The initial concept and design work were created in Figma. The design process supported the exploration of user needs and the development of a solution informed by discussions with people involved in animal welfare and feedback from volunteers.
 
 ## Production
 
-The planned production website is:
+The production website is available at:
 
-**[https://flufi.pl](https://flufi.pl)**
+**https://flufi.pl**
 
-The application is intended to provide a simple and accessible way for people to discover opportunities to support animals and get involved with organisations in their local communities.
-
+Flufi provides a straightforward way for people to discover opportunities to support animals, contribute their time, and engage with animal welfare organisations and community initiatives.
 
 ## Funding
 
-Flufi is financed by the **Jagiellonian University (Uniwersytet Jagielloński)**.
+Flufi is financed by **Jagiellonian University (Uniwersytet Jagielloński)**.
 
-This initiative is funded by the **Living Lab Useful Research HUB Flagship Programme** as part of the Strategic Programme **“Initiative of Excellence” at the Jagiellonian University**.
+The initiative is funded by the **Living Lab Useful Research HUB Flagship Programme**, as part of the Strategic Programme **“Initiative of Excellence” at Jagiellonian University**.
 
 ## License
-This project is licensed under the GNU Affero General Public License v3.0 — see the [LICENSE](./LICENSE) file for details.
+
+This project is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0). See the [LICENSE](./LICENSE) file for details.
