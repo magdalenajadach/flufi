@@ -139,16 +139,16 @@ export default function About() {
                 Doskonałości w Uniwersytecie Jagiellońskim.
               </p>
             </div>
-            <div className="flex items-center justify-center gap-8 pt-8 pb-4 opacity-90">
+            <div className="flex items-center justify-center gap-4 pt-2 pb-2">
               <ImageWithFallback
                 src={livingLabLogo}
                 alt="Campus Living Lab"
-                className="h-24 w-auto object-contain"
+                className="h-72 w-auto object-contain"
               />
               <ImageWithFallback
                 src={uczelniaBadawczaLogo}
                 alt="Uczelnia Badawcza"
-                className="h-24 w-auto object-contain"
+                className="h-72 w-auto object-contain"
               />
             </div>
 
