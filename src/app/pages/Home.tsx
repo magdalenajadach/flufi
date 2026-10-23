@@ -53,15 +53,15 @@ export default function Home() {
               <h1 className="text-[26px] sm:text-[30px] lg:text-[34px] font-bold text-neutral-900 leading-tight tracking-tight">
                 Znajdź prosty sposób, by pomóc zwierzętom
               </h1>
-              <p className="text-[16px] sm:text-[18px] lg:text-[20px] font-medium text-neutral-500 leading-snug mt-1">
+              <p className="text-[16px] sm:text-[18px] lg:text-[20px] font-medium text-neutral-500 leading-snug mt-3">
                 Wybierz jak chcesz pomóc
               </p>
-              <p className="text-[13px] font-medium text-neutral-600 mt-3 leading-snug">
+              <p className="text-[13px] font-medium text-neutral-600 mt-5 leading-snug">
                 Flufi pomaga znaleźć konkretne możliwości
                 zaangażowania — nie zastępuje procedur adopcyjnych
                 ani zasad organizacji.
               </p>
-              <div className="flex flex-col gap-3 mt-6 w-full max-w-[420px] mx-auto lg:mx-0">
+              <div className="flex flex-col gap-5 mt-8 w-full max-w-[420px] mx-auto lg:mx-0">
                 <Link
                   to="/before-you-help"
                   className="w-full inline-flex items-center justify-center text-center px-6 py-4 lg:px-7 lg:py-5 rounded-full border-2 border-neutral-900 text-neutral-900 font-bold text-[15px] lg:text-[16px] hover:bg-neutral-900 hover:text-white transition-all motion-safe:hover:scale-[1.03] active:scale-[0.97] outline-none focus-visible:ring-[3px] focus-visible:ring-neutral-900 focus-visible:ring-offset-4 focus-visible:ring-offset-[#f0ebe2]"
