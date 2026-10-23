@@ -51,10 +51,10 @@ export default function Home() {
           <div className="flex-1 flex flex-col justify-center px-2 lg:px-0 lg:pr-10 pb-8 lg:pb-0">
             <div className="w-full text-center lg:text-left">
               <h1 className="text-[26px] sm:text-[30px] lg:text-[34px] font-bold text-neutral-900 leading-tight tracking-tight">
-                Znajdź prosty sposób, by pomóc zwierzętom.
+                Znajdź prosty sposób, by pomóc zwierzętom
               </h1>
               <p className="text-[16px] sm:text-[18px] lg:text-[20px] font-medium text-neutral-500 leading-snug mt-1">
-                Lokalnie, na swoich zasadach.
+                Wybierz jak chcesz pomóc
               </p>
               <p className="text-[13px] font-medium text-neutral-600 mt-3 leading-snug">
                 Flufi pomaga znaleźć konkretne możliwości
